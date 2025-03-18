@@ -25,8 +25,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/llm-inference-image:latest homeworks/one/
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/llm-inference-image ./homeworks/one/
           
       - name: Push Docker image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/llm-inference-image:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/llm-inference-image
